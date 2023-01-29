@@ -73,5 +73,14 @@ function getEvenNumbers() {
       }
   }
 }
-
 getEvenNumbers();
+
+//Napišite funkciju koja će proći kroz dvodimenzionalni niz i vratiti niz sa elementima iz svake podniza.
+
+let arr2 = [
+  [1, 2],
+  [3, 4],
+
+];
+let flatArray = [].concat.apply([], arr2);
+console.log(flatArray)
