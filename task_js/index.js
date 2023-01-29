@@ -1,4 +1,4 @@
-//Napišite funkciju koja će primiti niz brojeva i vratiti najveći broj u nizu.
+// Napišite funkciju koja će primiti niz brojeva i vratiti najveći broj u nizu.
 let arr = [1, 2, 78, 3, 4, 5, 6, 7, 8, 9];
 function maxNumber(arr) {
   let max = arr[0];
@@ -11,8 +11,8 @@ function maxNumber(arr) {
 }
 console.log(maxNumber(arr));
 
-//Napišite funkciju koja će primiti niz stringova i vratiti string sa najvećim brojem karaktera.
-let str1 = ["Vladan","Bojan", "Predrag","Ognjen"];
+// Napišite funkciju koja će primiti niz stringova i vratiti string sa najvećim brojem karaktera.
+let str1 = ["Vladan", "Bojan", "Predrag", "Ognjen"];
 
 function longestString(arr) {
   let longest = arr[0];
@@ -24,3 +24,31 @@ function longestString(arr) {
   return longest;
 }
 console.log(longestString(str1));
+
+// Napišite funkciju koja će primiti niz objekata i filtrirati ga po jednom od parametara objekta.
+
+let students = [
+  {
+    name: "Raj",
+    Age: "15",
+    RollNumber: "123",
+    Marks: "99",
+  },
+  {
+    name: "Aman",
+    Age: "14",
+    RollNumber: "223",
+    Marks: "69",
+  },
+  {
+    name: "Vivek",
+    Age: "13",
+    RollNumber: "253",
+    Marks: "89",
+  },
+];
+
+var newArray = students.filter(function (el) {
+  return el.Age >= 15 && el.RollNumber <= 200 && el.Marks >= 80;
+});
+console.log(newArray);
