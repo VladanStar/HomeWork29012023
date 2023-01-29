@@ -84,3 +84,22 @@ let arr2 = [
 ];
 let flatArray = [].concat.apply([], arr2);
 console.log(flatArray)
+
+//Napišite funkciju koja će primiti niz i vratiti niz bez duplikata elemenata.
+
+let arr3 = ['A', 'B', 'A', 'C', 'B'];
+
+function uniq(a) {
+  var seen = {};
+  return a.filter(function(item) {
+      return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+  });
+}
+
+console.log(uniq(arr3));
+
+//  Napišite funkciju koja će primiti niz i vratiti novi niz sa elementima iz originalnog niza sortiranim u rastućem redosledu.
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+fruits.reverse();
+console.log(fruits)
