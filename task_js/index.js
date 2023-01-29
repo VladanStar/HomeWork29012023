@@ -52,3 +52,12 @@ var newArray = students.filter(function (el) {
   return el.Age >= 15 && el.RollNumber <= 200 && el.Marks >= 80;
 });
 console.log(newArray);
+
+
+// Napišite funkciju koja će primiti dva niza i spojiti ih u jedan niz.
+let text1 = "Hello";
+let text2 = "world!";
+let text3 = "Have a nice day!";
+let result = text1.concat(" ", text2, " ", text3);
+
+console.log(result)
