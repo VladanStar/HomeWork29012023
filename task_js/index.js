@@ -61,3 +61,17 @@ let text3 = "Have a nice day!";
 let result = text1.concat(" ", text2, " ", text3);
 
 console.log(result)
+
+
+// Napišite funkciju koja će primiti niz brojeva i vratiti niz sa parnim brojevima.
+function getEvenNumbers() {
+  var arr = [1, 2, 3, 4, 5, 6];
+
+  for (var i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+         console.log(arr[i] )
+      }
+  }
+}
+
+getEvenNumbers();
