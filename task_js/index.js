@@ -104,10 +104,27 @@ fruits.sort();
 fruits.reverse();
 console.log(fruits)
 
-
+var arr4 = [1, 2, 3, 4, 5, 6];
 function sortDescending(arr) {
-  var arr4 = [1, 2, 3, 4, 5, 6];
-  return arr4.sort((a, b) => b - a);
+ 
+  return arr4.sort((a, b) => a - b);
 }
+console.log(sortDescending(arr4))
 
 //Napišite funkciju koja će primiti niz i vratiti novi niz sa elementima iz originalnog niza sortiranim u opadajućem redosledu.
+
+let array = [40,100,1,5,25,10];
+let sortedArray = array.sort(function(a,b){return b-a});
+console.log(sortedArray);
+
+// Napišite  JavaScript funkciju koja će primiti niz i vratiti broj ponavljanja svakog elementa u nizu.
+const arr = ['M', 'M', 'M', 'S', 'S', 'S', 'R', 'C', 'S', 'S', 'S'];
+
+let result = Object.values(arr.reduce((acc, el) => {
+  if (!acc.hasOwnProperty(el)) acc[el] = { name: el, duplicates: 0 };
+  acc[el].duplicates++;
+  return acc;
+}, {}));
+
+
+console.log(result)
