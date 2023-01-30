@@ -31,20 +31,20 @@ let students = [
   {
     ime: "Zoran",
     godine: "25",
-   prosek: "9.8",
-   uspeh: "99",
+    prosek: "9.8",
+    uspeh: "99",
   },
   {
     ime: "Aleksandar",
     godine: "19",
-   prosek: "10",
-   uspeh: "69",
+    prosek: "10",
+    uspeh: "69",
   },
   {
     ime: "Vladimir",
     godine: "23",
-   prosek: "6.7",
-   uspeh: "89",
+    prosek: "6.7",
+    uspeh: "89",
   },
 ];
 
@@ -53,28 +53,24 @@ let newArray = students.filter(function (el) {
 });
 console.log(newArray);
 
-
 // Napišite funkciju koja će primiti dva niza i spojiti ih u jedan niz.
-let t1 = [1,2,3,4];
-let t2 =[5,6,7,8,9,10];
-
+let t1 = [1, 2, 3, 4];
+let t2 = [5, 6, 7, 8, 9, 10];
 
 // console.log(spajanje(text1,text2))
-function concatArr (array1, array2){
-
- return [...array1, ...array2];
+function concatArr(array1, array2) {
+  return [...array1, ...array2];
 }
-console.log(concatArr(t1,t2))
-
+console.log(concatArr(t1, t2));
 
 // Napišite funkciju koja će primiti niz brojeva i vratiti niz sa parnim brojevima.
 function getEvenNumbers() {
   let arr = [1, 2, 3, 4, 5, 6];
 
   for (let i = 0; i < arr.length; i++) {
-      if (arr[i] % 2 === 0) {
-         console.log(arr[i] )
-      }
+    if (arr[i] % 2 === 0) {
+      console.log(arr[i]);
+    }
   }
 }
 getEvenNumbers();
@@ -84,19 +80,18 @@ getEvenNumbers();
 let arr2 = [
   [1, 2],
   [3, 4],
-
 ];
 let flatArray = [].concat.apply([], arr2);
-console.log(flatArray)
+console.log(flatArray);
 
 //Napišite funkciju koja će primiti niz i vratiti niz bez duplikata elemenata.
 
-let arr3 = ['A', 'B', 'A', 'C', 'B'];
+let arr3 = ["A", "B", "A", "C", "B"];
 
 function uniq(a) {
   let seen = {};
-  return a.filter(function(item) {
-      return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+  return a.filter(function (item) {
+    return seen.hasOwnProperty(item) ? false : (seen[item] = true);
   });
 }
 
@@ -106,26 +101,27 @@ console.log(uniq(arr3));
 
 let arr4 = [1, 2, 3, 4, 5, 6];
 function sortDescending(arr) {
- 
   return arr4.sort((a, b) => a - b);
 }
-console.log(sortDescending(arr4))
+console.log(sortDescending(arr4));
 
 //Napišite funkciju koja će primiti niz i vratiti novi niz sa elementima iz originalnog niza sortiranim u opadajućem redosledu.
 
-let array = [40,100,1,5,25,10];
-function  sortedArray (array){ array.sort(function(a,b){return b-a});
+let array = [40, 100, 1, 5, 25, 10];
+function sortedArray(array) {
+  array.sort(function (a, b) {
+    return b - a;
+  });
 }
 console.log(sortedArray(array));
 
 // Napišite  JavaScript funkciju koja će primiti niz i vratiti broj ponavljanja svakog elementa u nizu.
 
-const arr6 = ['M', 'M', 'M', 'S', 'S', 'S', 'R', 'C', 'S', 'S', 'S'];
-
+const arr6 = ["M", "M", "M", "S", "S", "S", "R", "C", "S", "S", "S"];
 
 function countOccurrences(arr) {
-  return arr.reduce(function(a, b){
-    a[b] = a[b] + 1 || 1
+  return arr.reduce(function (a, b) {
+    a[b] = a[b] + 1 || 1;
     return a;
   }, {});
 }
