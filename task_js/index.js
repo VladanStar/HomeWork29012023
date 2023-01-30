@@ -103,3 +103,11 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.sort();
 fruits.reverse();
 console.log(fruits)
+
+
+function sortDescending(arr) {
+  var arr4 = [1, 2, 3, 4, 5, 6];
+  return arr4.sort((a, b) => b - a);
+}
+
+//Napišite funkciju koja će primiti niz i vratiti novi niz sa elementima iz originalnog niza sortiranim u opadajućem redosledu.
