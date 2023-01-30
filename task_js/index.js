@@ -118,13 +118,14 @@ let sortedArray = array.sort(function(a,b){return b-a});
 console.log(sortedArray);
 
 // Napišite  JavaScript funkciju koja će primiti niz i vratiti broj ponavljanja svakog elementa u nizu.
-const arr = ['M', 'M', 'M', 'S', 'S', 'S', 'R', 'C', 'S', 'S', 'S'];
 
-let result = Object.values(arr.reduce((acc, el) => {
-  if (!acc.hasOwnProperty(el)) acc[el] = { name: el, duplicates: 0 };
-  acc[el].duplicates++;
-  return acc;
-}, {}));
+const arr6 = ['M', 'M', 'M', 'S', 'S', 'S', 'R', 'C', 'S', 'S', 'S'];
 
 
-console.log(result)
+function countOccurrences(arr) {
+  return arr.reduce(function(a, b){
+    a[b] = a[b] + 1 || 1
+    return a;
+  }, {});
+}
+console.log(countOccurrences(arr6));
