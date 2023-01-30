@@ -29,38 +29,42 @@ console.log(longestString(str1));
 
 let students = [
   {
-    name: "Raj",
-    Age: "15",
-    RollNumber: "123",
-    Marks: "99",
+    ime: "Zoran",
+    godine: "25",
+   prosek: "9.8",
+   uspeh: "99",
   },
   {
-    name: "Aman",
-    Age: "14",
-    RollNumber: "223",
-    Marks: "69",
+    ime: "Aleksandar",
+    godine: "19",
+   prosek: "10",
+   uspeh: "69",
   },
   {
-    name: "Vivek",
-    Age: "13",
-    RollNumber: "253",
-    Marks: "89",
+    ime: "Vladimir",
+    godine: "23",
+   prosek: "6.7",
+   uspeh: "89",
   },
 ];
 
 var newArray = students.filter(function (el) {
-  return el.Age >= 15 && el.RollNumber <= 200 && el.Marks >= 80;
+  return el.godine >= 15 && el.prosek <= 200 && el.uspeh >= 80;
 });
 console.log(newArray);
 
 
 // Napišite funkciju koja će primiti dva niza i spojiti ih u jedan niz.
-let text1 = "Hello";
-let text2 = "world!";
-let text3 = "Have a nice day!";
-let result = text1.concat(" ", text2, " ", text3);
+let t1 = [1,2,3,4];
+let t2 =[5,6,7,8,9,10];
 
-console.log(result)
+
+// console.log(spajanje(text1,text2))
+function concatArr (array1, array2){
+
+ return [...array1, ...array2];
+}
+console.log(concatArr(t1,t2))
 
 
 // Napišite funkciju koja će primiti niz brojeva i vratiti niz sa parnim brojevima.
@@ -99,10 +103,6 @@ function uniq(a) {
 console.log(uniq(arr3));
 
 //  Napišite funkciju koja će primiti niz i vratiti novi niz sa elementima iz originalnog niza sortiranim u rastućem redosledu.
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.sort();
-fruits.reverse();
-console.log(fruits)
 
 var arr4 = [1, 2, 3, 4, 5, 6];
 function sortDescending(arr) {
